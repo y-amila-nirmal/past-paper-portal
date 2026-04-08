@@ -28,19 +28,39 @@ function parseCSVLine(line: string): string[] {
 const CSV_DATA = `Date,Time,Dept.,Subject,Title
 23.04.2026,9.00 a.m. - 12.00 p.m.,ALL,CMT 1303,Fundamentals of Mathematics for Technology
 27.04.2026,9.00 a.m. - 12.00 p.m.,ALL,CMT 1301,Fundamentals of Physics for Technology
-04.05.2026,9.00 a.m. - 12.00 p.m.,ALL,CMT 1302,Fundamentals of Chemistry for Technology
+
+04.05.2026,9.00 a.m. - 12.00 p.m.,ENT,CMT 1302,Fundamentals of Chemistry for Technology
+04.05.2026,9.00 a.m. - 12.00 p.m.,BST,CMT 1302,Fundamentals of Chemistry for Technology
 04.05.2026,9.00 a.m. - 12.00 p.m.,ICT,ICT 1305,Program Designing and Programming (Theory)
-08.05.2026,9.00 a.m. - 12.00 p.m.,ALL,CMT 1304,Fundamentals of Computer for Technology
+
+
+08.05.2026,9.00 a.m. - 12.00 p.m.,ENT,CMT 1304,Fundamentals of Computer for Technology
+08.05.2026,9.00 a.m. - 12.00 p.m.,BST,CMT 1304,Fundamentals of Computer for Technology
+
 08.05.2026,9.00 a.m. onwards,ICT,ICT 1305,Program Designing and Programming (Practical)
-12.05.2026,9.00 a.m. - 12.00 p.m.,ALL,CMT 1306,Fundamentals of Biology for Technology
+
+12.05.2026,9.00 a.m. - 12.00 p.m.,BST,CMT 1306,Fundamentals of Biology for Technology
+
 12.05.2026,9.00 a.m. - 11.00 a.m.,ICT,ICT 1202,Electronic Circuits
-14.05.2026,11.00 a.m. onwards,ALL,CML 1202,Presentation Skills - Group Presentations
-15.05.2026,9.00 a.m. onwards,ALL,CML 1202,Presentation Skills - Individual Speech (Group 01)
+
+14.05.2026,11.00 a.m. onwards,ENT,CML 1202,Presentation Skills - Group Presentations
+14.05.2026,11.00 a.m. onwards,BST,CML 1202,Presentation Skills - Group Presentations
+
+15.05.2026,9.00 a.m. onwards,ENT,CML 1202,Presentation Skills - Individual Speech (Group 01)
+15.05.2026,9.00 a.m. onwards,BST,CML 1202,Presentation Skills - Individual Speech (Group 01)
+
 15.05.2026,9.00 a.m. onwards,ICT,ICT 1111,Productivity & Collaborative Tools (Th & Pr)
-18.05.2026,9.00 a.m. onwards,ALL,CML 1202,Presentation Skills - Individual Speech (Group 02)
-21.05.2026,2.30 p.m. - 4.00 p.m.,ALL,CML 1201,Personality Development
-23.05.2026,1.30 p.m. - 4.30 p.m.,ALL,CMT 1205,Communication Skills I - English (Theory)
-25.05.2026,9.00 a.m. - 10.00 a.m.,ALL,CML 1202,Presentation Skills (Theory)
+
+18.05.2026,9.00 a.m. onwards,ENT,CML 1202,Presentation Skills - Individual Speech (Group 02)
+18.05.2026,9.00 a.m. onwards,BST,CML 1202,Presentation Skills - Individual Speech (Group 02)
+
+19.05.2026,2.30 p.m. - 4.00 p.m.,ALL,CML 1201,Personality Development
+
+22.05.2026,1.30 p.m. - 4.30 p.m.,ALL,CMT 1205,Communication Skills I - English (Theory)
+
+25.05.2026,9.00 a.m. - 10.00 a.m.,ENT,CML 1202,Presentation Skills (Theory)
+25.05.2026,9.00 a.m. - 10.00 a.m.,BST,CML 1202,Presentation Skills (Theory)
+
 26.05.2026,9.00 a.m. onwards,ALL,CMT 1205,Communication Skills 1 - English (Practical)
 ,,,,
 ,,,,
@@ -109,7 +129,8 @@ Date,Time,Dept.,Subject,Title
 14.05.2026,9.00 a.m. - 12.00 a.m.,EET,EET 3305,Control Systems
 14.05.2026,9.00 a.m. onwards,ICT,ICT 3307,Computational Statistics (Practical)
 14.05.2026,9.00 a.m. onwards,BPT,BPT 3208,Industrial Microbiology (Practical)
-15.05.2026,9.00 a.m. - 11.00 a.m.,EET,EET 3210,Electrical Installations
+
+18.05.2026,9.00 a.m. - 11.00 a.m.,EET,EET 3210,Electrical Installations
 18.05.2026,9.00 a.m. onwards,BPT,BPT 3304,Molecular Modelling (Practical)
 18.05.2026,9.00 a.m. - 11.00 a.m.,FDT,FDT 3202,Food Engineering
 18.05.2026,9.00 a.m. - 11.00 a.m.,MTT,MTT 3202,Degradation of Materials
@@ -117,8 +138,8 @@ Date,Time,Dept.,Subject,Title
 21.05.2026,1.00 p.m. - 4.00 p.m.,BPT,BPT 3302,Bioinformatics (Theory)
 21.05.2026,1.00 p.m. - 3.00 p.m.,ICT,ICT 3217,Advance Computer Networks
 25.05.2026,11.00 a.m. - 12.00 p.m.,ALL,CML 3101,Legal and Patent Aspects
-29.05.2026,1.00 p.m. - 3.00 p.m.,BPT,BPT 3201,Molecular Microbiology
-29.05.2026,1.00 p.m. - 3.00 p.m.,ICT,ICT 3201,Software Project Management
+26.05.2026,1.00 p.m. - 3.00 p.m.,BPT,BPT 3201,Molecular Microbiology
+26.05.2026,1.00 p.m. - 3.00 p.m.,ICT,ICT 3201,Software Project Management
 29.05.2026,9.00 a.m. onwards,BPT,BPT 3302,Bioinformatics (Practical)
 ,,,,
 ,,,,
@@ -139,7 +160,9 @@ Date,Time,Dept.,Subject,Title
 04.05.2026,1.00 p.m. onwards,EET,EET 4301,Electronic Circuit Design and Simulations (Prac)
 04.05.2026,2.00 p.m. - 5.00 p.m.,BPT,BPT 4302,Downstream Process Technology
 04.05.2026,2.00 p.m. - 5.00 p.m.,MTT,MTT 4305,Polymer Technology II
+
 04.05.2026,2.00 p.m. - 4.00 p.m.,FDT,FDT 4302,Food Product Development (Theory)
+
 08.05.2026,2.00 p.m. - 5.00 p.m.,BPT,BPT 4303,Bioremediation and Waste Management
 08.05.2026,2.00 p.m. - 5.00 p.m.,EET,EET 4303,Electrical Energy Utilizations
 08.05.2026,2.00 p.m. - 5.00 p.m.,MTT,MTT 4307,Metallurgy II
@@ -152,7 +175,7 @@ Date,Time,Dept.,Subject,Title
 15.05.2026,1.00 p.m. - 3.00 p.m.,BPT,BPT 4204,Molecular Virology (Theory)
 15.05.2026,1.00 p.m. - 3.00 p.m.,MTT,MTT 4219,Applied Mechanics
 19.05.2026,9.00 a.m. - 11.00 a.m.,EET,EET 4202,Embedded Systems
-21.05.2026,9.00 a.m. onwards,FDT,FDT 4302,Food Product Development (Viva)
+19.05.2026,9.00 a.m. onwards,FDT,FDT 4302,Food Product Development (Viva)
 23.05.2026,9.00 a.m. - 11.00 a.m.,ALL,CML 4202,Human Resource Management
 29.05.2026,9.00 a.m. onwards,BPT,BPT 4204,Molecular Virology (Viva)`;
 

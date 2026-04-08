@@ -21,6 +21,8 @@ const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const DEPT_COLORS: Record<string, string> = {
     ALL: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
     ICT: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+    BST: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300",
+    ENT: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/40 dark:text-cyan-300",
     BPT: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
     FDT: "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
     EET: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
